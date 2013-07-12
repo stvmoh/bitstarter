@@ -1,11 +1,12 @@
+//#!/usr/bin/env node
 var express = require('express');
 
 var app = express.createServer(express.logger());
 
+var buf = fs.readFile('index.html');
 
 app.get('/', function(request, response) {
-//  response.send('Hello World2!');
-  var buf = fs.readFile('index.html');
+  //response.send('Hello World2!');
   response.send(buf.toString());
 });
 
